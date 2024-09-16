@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  YPImageFeed
-//
-//  Created by Олег Дерябин on 16.09.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
