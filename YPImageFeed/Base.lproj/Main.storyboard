@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,12 +98,83 @@
             </objects>
             <point key="canvasLocation" x="48" y="-2"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="T7m-pC-5V7">
+            <objects>
+                <viewController id="zBp-1J-fz6" customClass="ProfileViewController" customModule="YPImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nse-bs-Uja">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qW7-HQ-eFj" userLabel="Name Label">
+                                <rect key="frame" x="16" y="169" width="377" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="MVp-c5-AHY">
+                                <rect key="frame" x="16" y="91" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MVp-c5-AHY" secondAttribute="height" multiplier="1:1" id="V8a-u7-dA4"/>
+                                    <constraint firstAttribute="width" constant="70" id="Ysv-dd-Vb4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SF-j9-zW4" userLabel="Logout Button">
+                                <rect key="frame" x="333" y="104" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="1al-ah-iu6"/>
+                                    <constraint firstAttribute="height" constant="44" id="mL2-Cn-ePJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Exit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoB-al-BFN" userLabel="Login Name">
+                                <rect key="frame" x="16" y="205" width="377" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="YP Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-Er-KIe">
+                                <rect key="frame" x="16" y="229" width="377" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wkt-lk-dRr"/>
+                        <color key="backgroundColor" name="YP Black"/>
+                        <constraints>
+                            <constraint firstItem="0SF-j9-zW4" firstAttribute="centerY" secondItem="MVp-c5-AHY" secondAttribute="centerY" id="EKs-Kw-xB8"/>
+                            <constraint firstItem="wkt-lk-dRr" firstAttribute="trailing" secondItem="bWh-Er-KIe" secondAttribute="trailing" symbolic="YES" id="Gxn-bK-fUd"/>
+                            <constraint firstItem="bWh-Er-KIe" firstAttribute="top" secondItem="JoB-al-BFN" secondAttribute="bottom" constant="8" id="L4H-CG-45u"/>
+                            <constraint firstItem="wkt-lk-dRr" firstAttribute="trailing" secondItem="0SF-j9-zW4" secondAttribute="trailing" constant="16" id="MLt-xV-Ugl"/>
+                            <constraint firstItem="qW7-HQ-eFj" firstAttribute="top" secondItem="MVp-c5-AHY" secondAttribute="bottom" constant="8" id="SqT-w5-d0n"/>
+                            <constraint firstItem="wkt-lk-dRr" firstAttribute="trailing" secondItem="qW7-HQ-eFj" secondAttribute="trailing" symbolic="YES" id="XUb-eI-1k2"/>
+                            <constraint firstItem="JoB-al-BFN" firstAttribute="top" secondItem="qW7-HQ-eFj" secondAttribute="bottom" constant="8" id="dNV-dm-4Vg"/>
+                            <constraint firstItem="wkt-lk-dRr" firstAttribute="trailing" secondItem="JoB-al-BFN" secondAttribute="trailing" symbolic="YES" id="j7L-lt-hko"/>
+                            <constraint firstItem="JoB-al-BFN" firstAttribute="leading" secondItem="wkt-lk-dRr" secondAttribute="leading" constant="16" id="kVh-0K-Gzh"/>
+                            <constraint firstItem="MVp-c5-AHY" firstAttribute="leading" secondItem="wkt-lk-dRr" secondAttribute="leading" constant="16" id="mVN-Ti-PJd"/>
+                            <constraint firstItem="qW7-HQ-eFj" firstAttribute="leading" secondItem="wkt-lk-dRr" secondAttribute="leading" constant="16" id="q7X-8H-AjH"/>
+                            <constraint firstItem="MVp-c5-AHY" firstAttribute="top" secondItem="wkt-lk-dRr" secondAttribute="top" constant="32" id="z1l-pZ-3gG"/>
+                            <constraint firstItem="bWh-Er-KIe" firstAttribute="leading" secondItem="wkt-lk-dRr" secondAttribute="leading" constant="16" id="zLQ-1t-lzh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIg-bw-bn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="Exit" width="24" height="24"/>
+        <image name="Photo" width="70" height="70"/>
         <image name="like_button_on" width="42" height="42"/>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="YP Grey">
+            <color red="0.68235294117647061" green="0.68627450980392157" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
