@@ -15,13 +15,14 @@ class ProfileViewController: UIViewController {
         view.addSubview(avatarImageView)
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        
+
         let nameLabel = UILabel()
         nameLabel.text = "Екатерина Новикова"
         view.addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textColor = .white
         nameLabel.font = .systemFont(ofSize: 23, weight: .bold)
+        
         
         let loginLabel = UILabel()
         loginLabel.text = "@ekaterina_nov"
@@ -37,6 +38,7 @@ class ProfileViewController: UIViewController {
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.textColor = .white
         descriptionLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        
         
         let logoutButton = UIButton(type: .custom)
         logoutButton.setImage(UIImage(named: "Exit"), for: .normal)
